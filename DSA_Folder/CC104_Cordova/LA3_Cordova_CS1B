@@ -1,1 +1,39 @@
+// gradeAssignment_v2.js
+
+// Prompt the user to input their score
+// 'prompt()' opens a dialog box asking the user to type in a value
+let score = parseInt(prompt("Enter your score:"));  // We convert the input to an integer using parseInt
+
+// Assign grade using conditional (ternary) operators
+// The ternary operator checks the condition from top to bottom and assigns the first matching result
+let grade =
+  score >= 97 ? '1.00 – Excellent' :
+  score >= 94 ? '1.25 – Excellent' :
+  score >= 91 ? '1.50 – Above Average' :
+  score >= 88 ? '1.75 – Above Average' :
+  score >= 85 ? '2.00 – Average' :
+  score >= 82 ? '2.25 – Average' :
+  score >= 79 ? '2.50 – Below Average' :
+  score >= 76 ? '2.75 – Below Average' :
+  score === 75 ? '3.00 – Below Average' :
+  score >= 72 ? '4.00 – Poor' :
+  '5.00 – Poor';  // If none of the above, it's below 72
+
+// Determine remarks using if...else if...else statements
+// These give additional feedback or evaluation remarks based on the score
+let remarks;
+
+if (score >= 90) {
+  remarks = "HIGH PASS, Candidate for Cum Laude";
+} else if (score >= 80) {
+  remarks = "AVERAGE PASS";
+} else if (score >= 75) {
+  remarks = "LOW PASS";
+} else {
+  remarks = "FAILED, Needs Improvement";
+}
+
+// Output the results using 'alert'
+// This will show the score, equivalent grade, and the final remark in a pop-up box
+alert(`Your score: ${score}\nEquivalent Grade: ${grade}\nRemarks: ${remarks}`);
 
