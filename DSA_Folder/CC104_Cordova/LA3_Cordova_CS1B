@@ -1,4 +1,4 @@
-// gradeAssignment_v2.js
+assignment1
 
 // Prompt the user to input their score
 // 'prompt()' opens a dialog box asking the user to type in a value
@@ -37,3 +37,31 @@ if (score >= 90) {
 // This will show the score, equivalent grade, and the final remark in a pop-up box
 alert(`Your score: ${score}\nEquivalent Grade: ${grade}\nRemarks: ${remarks}`);
 
+assignment2
+// iterationMapping
+
+// Prompt the user to input the maximum limit of the loops
+let maxLimit = parseInt(prompt("Enter the Max Limit for the loops:"));
+
+// Check if input is a valid number
+if (isNaN(maxLimit) || maxLimit < 0) {
+  console.log("Please enter a valid non-negative number.");
+} else {
+  console.log(`Starting loop iteration mapping up to max limit: ${maxLimit}\n`);
+
+  // Outer loop: i from 0 to maxLimit
+  for (let i = 0; i <= maxLimit; i++) {
+
+    // Inner loop: j from 0 to maxLimit
+    for (let j = 0; j <= maxLimit; j++) {
+
+      // Add the current values of i and j
+      let sum = i + j;
+
+      // Log the current loop point and the sum
+      console.log(`Loop Point [i=${i}, j=${j}] -> Sum = ${sum}`);
+    }
+  }
+
+  console.log("\nLoop mapping complete.");
+}
